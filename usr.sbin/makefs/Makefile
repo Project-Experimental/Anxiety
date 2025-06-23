@@ -47,6 +47,10 @@ LIBADD=		netbsd util sbuf
 HAS_TESTS=
 SUBDIR.${MK_TESTS}+= tests
 
+.if ${MACHINE} == "host" || ${MK_DIRDEPS_BUILD} == "no"
+build-tools: ${PROG}
+.endif
+
 # cd9660_generate_path_table adds a global variable to an on-stack
 # TAILQ which temporarily stores a pointer to the on-stack TAILQ head
 # in the global

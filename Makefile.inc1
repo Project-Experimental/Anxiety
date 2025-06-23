@@ -2722,7 +2722,12 @@ ${_bt}-usr.sbin/config: ${_bt}-usr.bin/file2c ${_bt_lex_depend}
 # the links to make/bmake make links will have already have been created in the
 # `make legacy` step. Not adding a link to make is important on non-FreeBSD
 # since "make" will usually point to GNU make there.
+
+_other_bootstrap_tools+=lib/libsbuf
+${_bt}-usr.sbin/makefs: ${_bt}-lib/libsbuf
+
 _other_bootstrap_tools+=usr.bin/bmake
+_other_bootstrap_tools+=usr.sbin/makefs
 
 # Avoid dependency on host bz2 headers:
 _other_bootstrap_tools+=lib/libbz2
@@ -2735,6 +2740,7 @@ ${_bt}-lib/libdwarf: ${_bt}-lib/libz
 # libroken depends on libcrypt
 _other_bootstrap_tools+=lib/libcrypt
 ${_bt}-lib/libroken: ${_bt}-lib/libcrypt
+
 .else
 # All tools in _basic_bootstrap_tools have the same name as the subdirectory
 # so we can use :T to get the name of the symlinks that we need to create.
@@ -2861,7 +2867,7 @@ _bt_clean=	${CLEANDIR}
     ${_share} \
     usr.bin/awk \
     ${_libmagic} \
-    usr.bin/vi/catalog
+    usr.bin/vi/catalog 
 build-tools_${_tool}: .PHONY
 	${_+_}@${ECHODIR} "===> ${_tool} (${_bt_clean:D${_bt_clean},}obj,build-tools)"; \
 		cd ${.CURDIR}/${_tool}; \
