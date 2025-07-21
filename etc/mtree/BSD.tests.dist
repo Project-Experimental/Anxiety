@@ -318,6 +318,8 @@
             ..
             dynamicpie
             ..
+            errno
+            ..
             static
             ..
         ..
@@ -510,6 +512,8 @@
         route
         ..
         savecore
+        ..
+        swapon
         ..
         sysctl
         ..
