@@ -461,7 +461,7 @@ OLD_FILES+=usr/include/bsnmp/snmpclient.h
 OLD_FILES+=usr/include/bsnmp/snmpmod.h
 OLD_FILES+=usr/lib/libbsnmp.a
 OLD_FILES+=usr/lib/libbsnmp.so
-OLD_LIBS+=usr/lib/libbsnmp.so.6
+OLD_LIBS+=usr/lib/libbsnmp.so.7
 OLD_FILES+=usr/lib/libbsnmp_p.a
 OLD_FILES+=usr/lib/libbsnmptools.a
 OLD_FILES+=usr/lib/libbsnmptools.so
@@ -1473,12 +1473,12 @@ OLD_DIRS+=usr/share/dict
 .endif
 
 .if ${MK_DMAGENT} == no
+OLD_FILES+=etc/dma/auth.conf
 OLD_FILES+=etc/dma/dma.conf
 OLD_DIRS+=etc/dma
 OLD_FILES+=usr/libexec/dma
 OLD_FILES+=usr/libexec/dma-mbox-create
 OLD_FILES+=usr/share/man/man8/dma.8.gz
-OLD_FILES+=usr/share/examples/dma/auth.conf
 OLD_FILES+=usr/share/examples/dma/mailer.conf
 OLD_DIRS+=usr/share/examples/dma
 .endif
