@@ -5,6 +5,9 @@
 *.rej
 *.so
 *.sw[nop]
+*.iso
+*.img
+.vscode/
 *~
 _.tinderbox.*
 _.universe-toolchain

@@ -5302,3 +5302,6 @@ xdr/xdr_mbuf.c			optional xdr | krpc | nfslockd | nfscl | nfsd | zfs
 xdr/xdr_mem.c			optional xdr | krpc | nfslockd | nfscl | nfsd | zfs
 xdr/xdr_reference.c		optional xdr | krpc | nfslockd | nfscl | nfsd | zfs
 xdr/xdr_sizeof.c		optional xdr | krpc | nfslockd | nfscl | nfsd | zfs
+
+# The V Hypervisor
+V/V_main.cc				optional hypervisor_v
