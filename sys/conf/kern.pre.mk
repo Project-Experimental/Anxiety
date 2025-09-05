@@ -349,3 +349,7 @@ MKMODULESENV+=	__MPATH="${__MPATH}"
 DDB_ENABLED!=	grep DDB opt_ddb.h || true ; echo
 DTRACE_ENABLED!=grep KDTRACE_FRAME opt_kdtrace.h || true ; echo
 HWPMC_ENABLED!=	grep HWPMC opt_hwpmc_hooks.h || true ; echo
+
+NORMAL_CXX?=${CXX} ${CXXFLAGS} -std=c++23 \
+        -c ${.IMPSRC} -o ${.TARGET}
+

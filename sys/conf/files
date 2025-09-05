@@ -5304,4 +5304,4 @@ xdr/xdr_reference.c		optional xdr | krpc | nfslockd | nfscl | nfsd | zfs
 xdr/xdr_sizeof.c		optional xdr | krpc | nfslockd | nfscl | nfsd | zfs
 
 # The V Hypervisor
-V/V_main.cc				optional hypervisor_v
+W/W_main.cc				optional hypervisor_w compile-with "${NORMAL_CXX}"
