@@ -6,7 +6,11 @@
 #define KRB5_AUTOCONF_H
 
 #include <sys/types.h>
+#ifdef __FreeBSD__
 #include <machine/param.h>
+#else
+#include <sys/param.h>
+#endif
 
 
 /* Define if AES-NI support is enabled */

@@ -16,7 +16,7 @@ python3 tools/build/make.py -j8  --cross-bindir=${LLVM_DIR} \
 	-C release \
 	TARGET=amd64 TARGET_ARCH=amd64 \
 	INSTALL_DISTS="base kernel" \
-	memstick
+	cdrom
 
 echo $PATH
 

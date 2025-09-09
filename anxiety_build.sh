@@ -24,5 +24,5 @@ python3 tools/build/make.py -j8  --cross-bindir=${LLVM_DIR} \
 #        distrib-dirs distribution
 
 python3 tools/build/make.py -j8  --cross-bindir=${LLVM_DIR} \
-        TARGET=amd64 TARGET_ARCH=amd64 \
+        KERNCONF=THE_W TARGET=amd64 TARGET_ARCH=amd64 \
         buildkernel

@@ -10,6 +10,8 @@
 .if defined(DTS) || defined(DTSO) || defined(FDT_DTS_FILE)
 .include "dtb.build.mk"
 
+NM=/usr/bin/nm
+
 KERNEL_EXTRA+=	${DTB} ${DTBO}
 CLEAN+=		${DTB} ${DTBO}
 
